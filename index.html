@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <meta property="og:image" content="">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="CSS/styles.css" rel="stylesheet">
+    <link href="CSS/form.css" rel="stylesheet">
+    <script defer src="JS/scripts.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet"> -->
+
+    <!-- Czcionkę z Google font zostawiłam żeby pamiętać gdzie to umieścić -->
+
+</head>
+
+<body class="container">
+    
+    <div class="form">
+          
+        <form class="js-form">
+            <h1 class="form__name">Lista zadań</h1>
+            <div class="form__addTask">
+            <div class="form__cell form__cell--underline">
+                <label>
+                    <p>Dodaj nowe zadanie</p>
+                </label>
+                </div>
+                <div class="form__cell">
+                <input class="js-newTask" name="task" text autofocus required placeholder="Co jest do zrobienia?">
+                <button>Dodaj zadanie</button>
+                
+            </div>
+        </div>
+        <div class="form__taskList">
+            <div class="form__cell form__cell--underline">
+                <p>Lista zadań</p>
+            </div>
+        
+                <ul class="js-tasks">
+                    
+                </ul>
+            </div>
+
+
+        </form>
+    </div>
+</body>

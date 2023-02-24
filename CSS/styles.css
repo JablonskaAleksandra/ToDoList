@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.container {
+    background-color: hsl(0, 0%, 90%);
+   display: flex;
+    justify-content: center;
+    /* Jeszcze wdupię tu czcionkę i chyba tyle */
+    
+  
+}

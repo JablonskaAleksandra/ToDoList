@@ -1,0 +1,45 @@
+.form {
+
+    max-width: 900px;
+    min-width: 800px;
+
+   
+    
+}
+
+.form__cell {
+    
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+   
+   
+}
+
+.form__name {
+  font-size: larger;
+}
+
+
+.form__addTask {
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 5px 0px hsl(0, 0%, 70%);
+}
+
+.form__taskList {
+    box-shadow: 0px 0px 5px 0px hsl(0, 0%, 70%);
+}
+
+
+.form__cell--underline {
+    border-width: 0px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color: #cfcfcf;
+}
+
+.form__task--done {
+    text-decoration: line-through;
+}
