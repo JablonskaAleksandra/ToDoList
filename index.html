@@ -13,44 +13,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="CSS/styles.css" rel="stylesheet">
     <link href="CSS/form.css" rel="stylesheet">
+    <link href="CSS/headers.css" rel="stylesheet">
+    <link href="CSS/task.css" rel="stylesheet">
+    <link href="CSS/media.css" rel="stylesheet">
     <script defer src="JS/scripts.js"></script>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Czcionkę z Google font zostawiłam żeby pamiętać gdzie to umieścić -->
 
 </head>
 
 <body class="container">
-    
-    <div class="form">
-          
-        <form class="js-form">
-            <h1 class="form__name">Lista zadań</h1>
-            <div class="form__addTask">
-            <div class="form__cell form__cell--underline">
-                <label>
-                    <p>Dodaj nowe zadanie</p>
-                </label>
-                </div>
-                <div class="form__cell">
-                <input class="js-newTask" name="task" text autofocus required placeholder="Co jest do zrobienia?">
-                <button>Dodaj zadanie</button>
-                
+    <form class="js-form form">
+        <h1 class="header__main">Lista zadań</h1>
+        <div class="form__field">
+            <div class="form__cell">
+                <h2 class="header__form">Dodaj nowe zadanie</h2>
+            </div>
+            <div class="form__cell">
+                <input class="form__input js-newTask" autofocus required placeholder="Co jest do zrobienia?">
+                <button class="form__submitButton">Dodaj zadanie</button>
             </div>
         </div>
-        <div class="form__taskList">
-            <div class="form__cell form__cell--underline">
-                <p>Lista zadań</p>
+        <div class="form__field">
+            <div class="form__cell">
+                <h2 class="header__form">Lista zadań</h2>
             </div>
-        
-                <ul class="js-tasks">
-                    
-                </ul>
+
+            <div class="form__cell">
+                <ul class="js-tasks form__taskList"></ul>
             </div>
 
 
-        </form>
+
+    </form>
     </div>
 </body>
