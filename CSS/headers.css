@@ -1,0 +1,10 @@
+.header__main {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.header__form {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 10px;
+}

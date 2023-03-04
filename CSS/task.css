@@ -1,0 +1,34 @@
+.task {
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    align-items: center;
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: -30px;
+    border-bottom: 1px solid #cfcfcf ;
+    }
+
+.task--done {
+    text-decoration: line-through;
+    }
+    
+.task__button {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.task__button.task__button--done {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.task__button.task__button--remove {
+    background-color: #ff0000;
+    color: #ffffff;
+}

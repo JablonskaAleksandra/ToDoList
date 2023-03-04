@@ -10,9 +10,17 @@ html {
 
 .container {
     background-color: hsl(0, 0%, 90%);
-   display: flex;
-    justify-content: center;
-    /* Jeszcze wdupię tu czcionkę i chyba tyle */
+    font-family: 'Lato', sans-serif;
+    word-break: break-word;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+
+
+
+    /* display: flex;
+    justify-content: center; */
+   /* Ten flex tutaj też finalnie okazał się niepotrzebny chyba i możliwe, że utrudnił umieszczanie elementów */
     
   
 }
