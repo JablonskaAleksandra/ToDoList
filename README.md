@@ -47,7 +47,7 @@ Come and see my other project:
  
 ## 🤔 Solutions provided in the project
 
-As I mentioned earlier, the goal of the project was to create an app that would work and look just like the one presented by my Mentor. This was the first project where we were not expected to create something according to our own vision. Creativity was also important here, but it wasn't to be manifested in the way we ostracize our site, but what solutions we would use to achieve a particular effect. Using all the knowledge I gained from the course, I tried to recreate the site that was presented to me and which was my only inspiration in this case. Of course, it should be mentioned that I did not have access to its code.
+As I mentioned earlier, the goal of the project was to create an app that would work and look just like the one presented by my Mentor. This was the first project where we were not expected to create something according to our own vision. Creativity was also important here, but it wasn't to be manifested in the way we styled our site, but what solutions we would use to achieve a particular effect. Using all the knowledge I gained from the course, I tried to recreate the site that was presented to me and which was my only inspiration in this case. Of course, it should be mentioned that I did not have access to its code.
 
 
 ## 💭 Conclusions for future projects
@@ -57,7 +57,7 @@ To my surprise, introducing all the functionality using JavaScript did not cause
 ## ✅ Project Status
 
 
-Project is: under evaluation 📝
+Project is: under evaluation... 📝
 
 Given that my task was to "copy" the page there is a pretty good chance that I did something differently or could have used better solutions. After feedback, the page will be edited and some changes will be made.
 
