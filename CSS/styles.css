@@ -8,19 +8,25 @@ html {
     box-sizing: inherit;
 }
 
-.container {
-    background-color: hsl(0, 0%, 90%);
+body {
+    background-color: #e6e6e6;
     font-family: 'Lato', sans-serif;
     word-break: break-word;
     max-width: 900px;
     min-width: 320px;
     margin: 0 auto;
+    justify-content: center;
+}
 
+main {
+    margin: 50px 20px 20px 20px;
+}
 
+h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
 
-    /* display: flex;
-    justify-content: center; */
-   /* Ten flex tutaj też finalnie okazał się niepotrzebny chyba i możliwe, że utrudnił umieszczanie elementów */
+    
     
   
-}

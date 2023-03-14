@@ -7,12 +7,13 @@
     padding-bottom: 10px;
     margin-right: 10px;
     margin-left: -30px;
-    border-bottom: 1px solid #cfcfcf ;
+    border-bottom: 1px solid #cfcfcf;
     }
 
 .task--done {
     text-decoration: line-through;
-    }
+    
+}
     
 .task__button {
     min-width: 30px;
