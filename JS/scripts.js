@@ -20,10 +20,6 @@
         render();
     };
 
-    const getTaskClass = (task) => {
-        return task.done ? "task--done" : "";
-    };
-
     const bindEvents = () => {
 
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -45,13 +41,11 @@
 
     const render = () => {
         let htmlString = "";
-
         for (const task of tasks) {
-            const taskClass = getTaskClass(task);
             htmlString += `
             <li class="task">
             <button class="js-done task__button task__button--done">${task.done ? "✔" : ""}</button>
-            <span class="${taskClass}">${task.content}</span>
+            <span class="${task.done ? "task--done" : ""}">${task.content}</span>
             <button class="js-remove task__button task__button--remove">🗑</button>
             </li>
             `;
@@ -66,17 +60,15 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
         const newTaskElement = document.querySelector(".js-newTask");
-        if (newTaskContent === "") {
-            return;
-        };
+        const newTaskContent = newTaskElement.value.trim();
 
-        addNewTask(newTaskContent);
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+        };
 
         newTaskElement.focus();
         newTaskElement.value = "";
-
     };
 
     const init = () => {
