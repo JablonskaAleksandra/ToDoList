@@ -1,24 +1,37 @@
 {
-    const tasks = [];
+    let tasks = [];
 
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-
-        });
-
+    const newTask = (newTaskContent) => {
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        const removedTasks = [
+            ...tasks.slice(0, taskIndex), 
+            ...tasks.slice(taskIndex + 1)
+        ];
+
+        tasks = removedTasks;
+
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        const removedTasks = [
+            ...tasks
+        ];
+        
+        removedTasks[taskIndex] = { ...removedTasks[taskIndex], done: !removedTasks[taskIndex].done };
+
+        tasks = removedTasks;
+
         render();
     };
+
 
     const bindEvents = () => {
 
@@ -64,7 +77,7 @@
         const newTaskContent = newTaskElement.value.trim();
 
         if (newTaskContent !== "") {
-            addNewTask(newTaskContent);
+            newTask(newTaskContent);
         };
 
         newTaskElement.focus();
