@@ -33,3 +33,7 @@
     background-color: #ff0000;
     color: #ffffff;
 }
+
+.task--hidden {
+    display: none;
+}

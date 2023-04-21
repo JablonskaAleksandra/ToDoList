@@ -17,3 +17,19 @@
     border-style: solid;
     border-color: #e6e6e6;
 }
+
+.section__button {
+    border: none;
+    background-color: #ffffff;
+    color: #008080;
+    /* display: grid;
+    grid-template-columns: auto; */
+  
+   
+}
+
+.section__button:disabled {
+    border: none;
+    background-color: #ffffff;
+    color: red;
+}
