@@ -20,11 +20,17 @@
 
     .section__buttons {
     margin-top: 15px;
+    margin-bottom: 15px;
     display: flex;
     gap: 15px;
     flex-direction: column;
-
 }
-
-    
+    .section__button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+    .section__header--modifier {
+    display: grid;
+    grid-template-columns: auto;
+}
 }
