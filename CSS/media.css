@@ -1,7 +1,4 @@
 @media (max-width: 768px) {
-    .section__header {
-        font-size: 150%;
-    }
 
     .form {
         margin: 10px;
@@ -20,4 +17,14 @@
         margin-top: 10px;
         min-width: 100%;
     }
+
+    .section__buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+}
+
+    
 }
