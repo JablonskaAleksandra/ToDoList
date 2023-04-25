@@ -112,25 +112,22 @@ const renderButtons = () => {
     document.querySelector(".js-buttons").innerHTML = buttonsHTML;
 };
 
-    const bindButtonsEvents = () => {
-        
-        render();
+const bindButtonsEvents = () => {
+    const doneAllTasksButton = document.querySelector(".js-doneAllTasks");
+    const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
 
-        const doneAllTasksButton = document.querySelector(".js-doneAllTasksButton");
-        const hideDoneTasksButton = document.querySelector(".js-hideDoneTasksButton");
-    
-        if (buttonsHTML !== "") {
-            doneAllTasksButton.addEventListener("click", () => {
-                finishAllTasks();
-            });
-            hideDoneTasksButton.addEventListener("click", () => {
-                switchBoolean();
-    
-            });
-        };
-        
-        
+    if (doneAllTasksButton) {
+        doneAllTasksButton.addEventListener("click", () => {
+            finishAllTasks();
+        });
+    }
+    if (hideDoneTasksButton) {
+        hideDoneTasksButton.addEventListener("click", () => {
+            switchBoolean();
+
+        });
     };
+};
     
     const render = () => {
         renderTasks();
