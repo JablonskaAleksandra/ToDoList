@@ -17,7 +17,14 @@
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: 0.5s;
 }
+
+.form__submitButton:hover {
+    background-color: #00b3b3;
+    transform: scale(1.1);
+}
+
 
 
 
