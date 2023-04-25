@@ -40,6 +40,7 @@ const finishAllTasks = () => {
 
     tasks = allTaskDone;
 
+
     render();
 };
 
@@ -99,15 +100,17 @@ const renderButtons = () => {
         if (hideDoneTasks) {
           buttonsHTML = `
             <button class="js-hideDoneTasks section__button">Pokaż ukończone</button>
-            <button class="js-doneAllTasks section__button">Ukończ wszystkie</button>
-          `;
-        } else {
-          buttonsHTML = `
-            <button class="js-hideDoneTasks section__button">Ukryj ukończone</button>
-            <button class="js-doneAllTasks section__button">Ukończ wszystkie</button>
+            <button class="js-doneAllTasks section__button" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
           `;
         }
-      }
+        else {
+          buttonsHTML = `
+            <button class="js-hideDoneTasks section__button">Ukryj ukończone</button>
+            <button class="js-doneAllTasks section__button" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
+          `;
+        };
+      };
+      
 
     document.querySelector(".js-buttons").innerHTML = buttonsHTML;
 };
