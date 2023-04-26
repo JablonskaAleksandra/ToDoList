@@ -19,40 +19,25 @@ const removeTask = (taskIndex) => {
 };
 
 const toggleTaskDone = (taskIndex) => {
-    const updatedTasks = tasks.map((task, index) => {
-        if (index === taskIndex) {
-            return { ...task, done:!task.done };
-        };
+    tasks = tasks.map((task, index) => index === taskIndex 
+      ? { ...task, done:!task.done }
+      : task
+    );
+  
+    render();
+  };
+  
 
-        return task;
-
-    });
-
-    tasks = updatedTasks;
-
+const toggleHideDoneTasks = () => {
+    hideDoneTasks = !hideDoneTasks;
     render();
 };
-
+ 
 const finishAllTasks = () => {
-    const allTaskDone = tasks.map(task => {
-        return { ...task, done: true };
-    });
-
-    tasks = allTaskDone;
-
+    tasks = tasks.map(task => ({ ...task, done: true }));
 
     render();
 };
-
-const switchBoolean = () => {
-    if (tasks.some(task => task.done) && !hideDoneTasks) {
-        hideDoneTasks = true;
-    } else {
-        hideDoneTasks = false;
-    }
-    render();
-};
-
 
 const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
@@ -97,19 +82,11 @@ const renderButtons = () => {
     let buttonsHTML = "";
     
     if (tasks.length > 0) {
-        if (hideDoneTasks) {
-          buttonsHTML = `
-            <button class="js-hideDoneTasks section__button">Pokaż ukończone</button>
-            <button class="js-doneAllTasks section__button" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
-          `;
-        }
-        else {
-          buttonsHTML = `
-            <button class="js-hideDoneTasks section__button">Ukryj ukończone</button>
-            <button class="js-doneAllTasks section__button" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
-          `;
-        };
-      };
+        buttonsHTML = `
+          <button class="js-hideDoneTasks section__button">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+          <button class="js-doneAllTasks section__button" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
+        `;
+    };
       
 
     document.querySelector(".js-buttons").innerHTML = buttonsHTML;
@@ -126,7 +103,7 @@ const bindButtonsEvents = () => {
     }
     if (hideDoneTasksButton) {
         hideDoneTasksButton.addEventListener("click", () => {
-            switchBoolean();
+            toggleHideDoneTasks();
 
         });
     };
