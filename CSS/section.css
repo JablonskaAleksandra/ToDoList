@@ -47,6 +47,15 @@
     
 }
 
+.section__button:active {
+    border: #000000 solid 2px;  
+}
+
+.section__button:hover {
+    color: #00b3b3;
+    transition: 0.5s;
+}
+
 .section__button:disabled {
     border: none;
     background-color: transparent;
@@ -54,15 +63,4 @@
     transition: none;
     cursor: auto;
     
-}
-
-.section__button:active {
-    border: #000000 solid 2px;
-    
-}
-
-.section__button:hover {
-    color: #00b3b3;
-    transition: 0.5s;
-
 }

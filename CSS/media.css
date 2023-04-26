@@ -33,4 +33,9 @@
     display: grid;
     grid-template-columns: auto;
 }
+
+    .form__submitButton:hover {
+    background-color: #00b3b3;
+    transform: scaleX(1.02) scaleY(1.02);
+}
 }
