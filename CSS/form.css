@@ -26,7 +26,30 @@
 }
 
 
+@media (max-width: 768px) {
 
+    .form {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    
+    .form__input {
+        margin: 0 auto;
+        min-width: 100%;  
+    }
+    
+    .form__submitButton {
+        margin: 0 auto;
+        margin-top: 10px;
+        min-width: 100%;
+    }
+
+    .form__submitButton:hover {
+        background-color: #00b3b3;
+        transform: scaleX(1.02) scaleY(1.02);
+    }
+}
 
   
 

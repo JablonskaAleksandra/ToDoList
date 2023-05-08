@@ -35,6 +35,7 @@
 .section__buttons {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .section__button {
@@ -43,8 +44,8 @@
     color: #008080;
     padding-left: 20px;
     padding-right: 20px;
+    transition: 0.3s;
     cursor: pointer;
-    
 }
 
 .section__button:active {
@@ -53,14 +54,28 @@
 
 .section__button:hover {
     color: #00b3b3;
-    transition: 0.5s;
+   
 }
 
 .section__button:disabled {
-    border: none;
-    background-color: transparent;
     color: #cfcfcf;
-    transition: none;
-    cursor: auto;
-    
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .section__buttons {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+    .section__button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+    .section__header--modifier {
+    display: grid;
+    grid-template-columns: auto;
+}
 }
